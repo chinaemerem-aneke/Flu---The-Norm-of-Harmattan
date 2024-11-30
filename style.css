@@ -193,7 +193,7 @@ footer {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 630px) {
   .main-nav {
     flex-direction: column;
     text-align: center;
