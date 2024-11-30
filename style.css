@@ -114,19 +114,18 @@ main {
 }
 
 #What-is-Flu, #causes, #prevention, #what-if-you-catch-it {
+  text-align: left;
   min-height: 80vh;
 }
 
 #What-is-Flu, 
 #prevention {
   background: var(--pale-yellow);
-  text-align: left;
 }
 
 #causes,
 #what-if-you-catch-it {
   background: var(--pale-green);
-  text-align: left;
 }
 
 
@@ -143,6 +142,7 @@ main {
 
 .section-content {
   flex: 1;
+  max-width: inherit;
 }
 
 .section-image {
