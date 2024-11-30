@@ -1,0 +1,216 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --soft-blue: hsl(240, 100%, 50%);
+  --white: hsl(0, 0%, 100%);
+  --light-orange: hsl(208, 100%, 97%);
+  /* --pale-yellow: #ff6b00; */
+  --light-blue: hsl(210, 100%, 95%);
+  --pale-green: hsl(120, 50%, 95%);
+  --pale-yellow: hsl(50, 100%, 95%);
+}
+
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--soft-blue);
+  color: var(--white);
+  padding: 15px 50px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.main-nav .logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  user-select: none;
+}
+
+.main-nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+.main-nav a {
+  color: var(--white);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  user-select: none;
+}
+
+.main-nav a:hover {
+  color: #ffcc00;
+}
+
+#hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f4f4f4;
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/assets/hero-img.jpg');
+  background-size: cover;
+  background-position: center;
+  color: var(--white);
+  text-align: center;
+  padding: 100px 20px;
+  min-height: 95vh;
+}
+
+.hero-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.hero-content h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: var(--white);
+}
+
+.hero-content p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #ff6b00;
+  color: var(--white);
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #ff8c00;
+}
+
+.section-flex {
+  
+  min-height: 100vh;
+}
+
+
+main {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#What-is-Flu, #causes, #prevention, #what-if-you-catch-it {
+  min-height: 80vh;
+}
+
+#What-is-Flu, 
+#prevention {
+  background: var(--pale-yellow);
+  text-align: left;
+}
+
+#causes,
+#what-if-you-catch-it {
+  background: var(--pale-green);
+  text-align: left;
+}
+
+
+.section-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  min-height: 95vh;
+  gap: 50px;
+}
+
+.section-content {
+  flex: 1;
+}
+
+.section-image {
+  flex: 1;
+}
+
+.section-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+h2 {
+  color: var(--soft-blue);
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+footer {
+  background-color: var(--soft-blue);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .section-flex {
+    flex-direction: column;
+    text-align: left;
+    gap: 2em;
+    padding-top: 3em;
+    padding-bottom: 3em;
+  }
+
+  .section-image {
+    order: -1;
+    max-width: 500px;
+  }
+
+  .main-nav {
+    padding: 15px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .main-nav ul {
+    margin-top: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-content h2 {
+    font-size: 1.8em;
+  }
+
+  .hero-content p {
+    font-size: 1em;
+    text-align: left;
+  }
+}
